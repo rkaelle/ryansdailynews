@@ -1,0 +1,16 @@
+
+dailyText.py needs to be sent after it is all done sending
+
+main.py needs updating so it indexes through all the users emails in my firebase and sends to the first name
+
+need to figure out sending emails at 7am every day
+
+TwilioGET.py needs to be called before email sends so it is able to recieve my most recent information
+
+Needs to extract TwilioGET info and upload to chatgpt to clean up the message
+
+Cool Science Fact needs to be created by ChatGPT
+
+Ryan's Market Analysis (Crypto + Securities) bot needs to be created in its own git repository and needs to be elaborate. Needs to be some sort of scale (invest or dont invest)
+
+Submit To Do List Here needs to be created

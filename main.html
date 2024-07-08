@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @font-face {
+            font-family: "NTR";
+            src: url("https://example.com/fonts/NTR-Regular.ttf") format("truetype");
+        }
+        body {
+            font-family: 'NTR', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9; /* Softer background color */
+            color: #333; /* Enhanced text visibility */
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background-color: #ffffff; /* Lighter container background for better readability */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Adding shadow for depth */
+            border: none; /* Removing the solid border */
+        }
+        .text-section {
+            background-color: #e8eaf6; /* Light blue background for text sections */
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+        }
+
+        .email-link {
+            text-decoration: underline;  /* Removes underline */
+            color: blue;         /* Inherits color from the parent element */
+            font-weight: bold;      /* Makes text bold */
+            cursor: pointer;        /* Changes the mouse cursor to indicate it's clickable */
+            background: none;       /* Ensures no background is applied */
+            padding: 0;             /* Removes padding if any */
+            border: none;           /* Ensures no border */
+            display: inline;        /* Keeps the link inline with text */
+        }
+
+        h2, .highlight-heading {
+            color: #0056b3; /* Brand color for heading */
+            font-size: 30px; /* Increased for emphasis */
+            margin-bottom: 10px; /* Adjusted spacing */
+            text-decoration: underline; /* Underlining headings */
+            text-align: center; /* Centering for specific highlights */
+            font-weight: bold; /* Bold for more emphasis */
+        }
+        p, ul {
+            color: #444; /* Darker font color for better readability */
+            line-height: 1.8; /* Increased line height for better readability */
+            font-size: 16px; /* Adjusted font size for paragraph */
+            margin-bottom: 10px;
+        }
+        h5 {
+            color: #333; /* Set to your desired default color for h5 elements */
+            text-align: center;
+        }
+
+        h5 a, h5 a:link, h5 a:visited {
+            color: blue; /* Set your preferred color for links within h5 */
+            text-decoration: underline;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        h5 a:hover, h5 a:active {
+            text-decoration: none; /* Example hover effect */
+        }
+        .small-text {
+            font-size: 14px; /* Smaller font size for specific content */
+        }
+        .highlight {
+            color: #e0c709; /* Maintaining highlight color */
+            font-weight: bold; /* Bold for emphasis */
+        }
+        a, button {
+            color: #ff6347; /* Vibrant accent color */
+            text-decoration: none;
+            background-color: #f0f0f0; /* Subtle button background */
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #e0e0e0; /* Button hover effect */
+        }
+        .footer {
+            font-size: 14px; /* Slightly larger for better readability */
+            text-align: center;
+            color: #666; /* Subtle color change */
+            margin-top: 20px;
+        }
+        img.signature, img.header {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: 20px auto;
+            border-radius: 10px; /* Rounded corners for images */
+        }
+        .task-title {
+            color: #e0c709;
+            font-weight: bold;
+        }
+        .time {
+            color: #333; 
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="text-section">
+            <h2>Welcome to Ryan's Daily News</h2>
+            <p>Good Morning {name}, </p>
+            <p>Stay updated with the latest news in tech, about my life, and interesting facts. Heres today's roundup:</p>
+        </div>
+        <div class="text-section">
+            <p class="highlight-heading">My Schedule for the Day</p>
+            <ul class="highlight">
+                {events_list}
+            </ul>
+        </div>
+        <div class="text-section">
+            <p class="highlight-heading">Skill I'm Learning Right Now</p>
+            <ul class="" id="skills">
+                {skills_list} 
+            </ul>
+        </div>
+        <div class="text-section">
+            <p class="highlight-heading">Reflection on the Day Yesterday</p>
+            <ul class="" id="reflection">
+                 {reflections_list}
+            </ul>
+        </div>
+        <div class="text-section">
+            <p class="highlight-heading">Cool Science Fact!</p>
+            <ul class="highlight small-text" id="fact">
+                {science_facts}
+           </ul>
+        </div>
+        <div class="text-section">
+            <p class="highlight-heading">Ryan's Market Analysis (Crypto + Securities)</p>
+            <ul class="highlight">
+                Crypto is booming... <h5>While this feature is still being made, I'll give you my two cents on the state of crypto at the moment. In the past week, Bitcoin(BTC) dropped over $600 millio in liquidations with the majority being long term positions. This caused panic and a day of large losses. Subsequently, Ethereum (eth) saw a dip eblow $3k. Luckily, the german government bought a considerable amount of BTC back from exchanges which helps to provide investor confidence and market stability.</h5><ul class="highlight">
+                    Now is as good of a time as ever to invest!</ul>
+            </ul>
+            
+        </div>
+        <div class="text-section">
+            <p class="highlight-heading">To-Do List</p>
+            <h5>Do you have a recommendation you want to share with readers? Submit your best rec <a href="mailto:ryan@rkaelle.com?subject=I have a recommendation for the to-do list&body=Dear Ryan,%0D%0A%0D%0AI was thinking        [YOUR IDEA HERE]%0D%0A%0D%0Awould be a good idea for the to-do list. Thanks!" class="email-link">here</a> and it may be featured in next week’s list.</h5>
+            <ul class="h5">
+                <input type="checkbox" id="task1" name="task1" value="Cook">
+                <label for="task1"><span class="task-title">Cook:</span> Try weekday banana oat pancakes—kid-approved and freezer-friendly!</label><br>
+                
+                <input type="checkbox" id="task2" name="task2" value="Chess">
+                <label for="task2"><span class="task-title">Play a game of chess:</span> Challenge your mind with a strategic duel.</label><br>
+                
+                <input type="checkbox" id="task3" name="task3" value="Read">
+                <label for="task3"><span class="task-title">Read a book:</span> Escape into another world or enhance your knowledge.</label><br>
+                
+                <input type="checkbox" id="task4" name="task4" value="Hug">
+                <label for="task4"><span class="task-title">Give your loved ones a hug:</span> Nothing beats a warm, comforting embrace.</label><br>
+                
+                <input type="checkbox" id="task5" name="task5" value="LearnSkill">
+                <label for="task5"><span class="task-title">Learn a new skill:</span> From solving the Rubik's cube to knitting, coding, or even a standing backflip!</label><br><br>
+            </ul>
+        </div>
+        <img src="https://rkaelle.com/assets/Signature.gif" alt="Ryan's Signature" class="signature">
+        
+        <div class="footer">
+            <p>Thank you for subscribing! </p>
+            <button onclick="window.location.href='www.rkaelle.com/#/manage';">Unsubscribe</button>
+            <p>© 2024 Ryan Kaelle. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
