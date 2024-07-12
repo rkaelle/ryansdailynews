@@ -1,5 +1,8 @@
 from twilio.rest import Client
+from dotenv import load_dotenv
 import os
+
+load_dotenv()
 
 def send_daily_sms():
     account_sid = os.environ['TWILIO_SID']
@@ -10,10 +13,9 @@ def send_daily_sms():
     try:
         message = client.messages.create(
             body = ("What skill are you learning today?\n"
-                    "Skill you are learning right now?\n"
-                    "Reflection on the day yesterday\n"
-                    "Favorite food yesterday\n"
-                    "Respond By 6AM"
+                    "Write a brief reflection on the day yesterday?\n"
+                    "What was your favorite food you ate yesterday?\n"
+                    "~Respond By 6AM~"
                     ),
             from_='+18449035435', 
             to='+19258859358'

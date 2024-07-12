@@ -1,0 +1,24 @@
+# Ignore token.json file
+token.json
+
+# Ignore firebasecredentials.json file
+firebasecredentials.json
+
+# Ignore credentials.json file
+credentials.json
+
+# Ignore notes.txt file
+notes.txt
+
+# Ignore environment variables file
+.env
+
+# Ignore virtual environment directory
+.venv/
+
+# Ignore Visual Studio Code settings
+.vscode/
+
+# Ignore Python bytecode files and directories
+__pycache__/
+*.pyc

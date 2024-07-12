@@ -12,88 +12,91 @@
             font-family: 'NTR', Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9; /* Softer background color */
-            color: #333; /* Enhanced text visibility */
+            background-color: #f4f4f9;
+            color: #333;
         }
         .container {
             max-width: 600px;
             margin: auto;
-            background-color: #ffffff; /* Lighter container background for better readability */
+            background-color: #ffffff;
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Adding shadow for depth */
-            border: none; /* Removing the solid border */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
         .text-section {
-            background-color: #e8eaf6; /* Light blue background for text sections */
+            background-color: #e8eaf6;
             padding: 15px;
             margin-bottom: 10px;
             border-radius: 4px;
         }
-
         .email-link {
-            text-decoration: underline;  /* Removes underline */
-            color: blue;         /* Inherits color from the parent element */
-            font-weight: bold;      /* Makes text bold */
-            cursor: pointer;        /* Changes the mouse cursor to indicate it's clickable */
-            background: none;       /* Ensures no background is applied */
-            padding: 0;             /* Removes padding if any */
-            border: none;           /* Ensures no border */
-            display: inline;        /* Keeps the link inline with text */
+            text-decoration: none;
+            color: blue;
+            font-weight: bold;
+            cursor: pointer;
+            background: none;
+            padding: 0;
+            border: none;
+            display: inline;
         }
-
         h2, .highlight-heading {
-            color: #0056b3; /* Brand color for heading */
-            font-size: 30px; /* Increased for emphasis */
-            margin-bottom: 10px; /* Adjusted spacing */
-            text-decoration: underline; /* Underlining headings */
-            text-align: center; /* Centering for specific highlights */
-            font-weight: bold; /* Bold for more emphasis */
+            background-color: #ffffff;
+            color: #0056b3;
+            font-size: 30px;
+            margin-bottom: 10px;
+            text-decoration: none;
+            text-align: center;
+            font-weight: bold;
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 5px;
         }
         p, ul {
-            color: #444; /* Darker font color for better readability */
-            line-height: 1.8; /* Increased line height for better readability */
-            font-size: 16px; /* Adjusted font size for paragraph */
+            color: #444;
+            line-height: 1.8;
+            font-size: 16px;
             margin-bottom: 10px;
         }
         h5 {
-            color: #333; /* Set to your desired default color for h5 elements */
+            color: #333;
             text-align: center;
+            background-color: #ffffff;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-
         h5 a, h5 a:link, h5 a:visited {
-            color: blue; /* Set your preferred color for links within h5 */
+            color: blue;
             text-decoration: underline;
             font-weight: bold;
             cursor: pointer;
         }
-
         h5 a:hover, h5 a:active {
-            text-decoration: none; /* Example hover effect */
+            text-decoration: none;
         }
         .small-text {
-            font-size: 14px; /* Smaller font size for specific content */
+            font-size: 14px;
         }
         .highlight {
-            color: #e0c709; /* Maintaining highlight color */
-            font-weight: bold; /* Bold for emphasis */
+            color: #e0c709;
+            font-weight: bold;
         }
         a, button {
-            color: #ff6347; /* Vibrant accent color */
+            color: #ff6347;
             text-decoration: none;
-            background-color: #f0f0f0; /* Subtle button background */
+            background-color: #f0f0f0;
             border: none;
             padding: 10px 20px;
             border-radius: 5px;
             cursor: pointer;
         }
         button:hover {
-            background-color: #e0e0e0; /* Button hover effect */
+            background-color: #e0e0e0;
         }
         .footer {
-            font-size: 14px; /* Slightly larger for better readability */
+            font-size: 14px;
             text-align: center;
-            color: #666; /* Subtle color change */
+            color: #666;
             margin-top: 20px;
         }
         img.signature, img.header {
@@ -101,24 +104,23 @@
             max-width: 100%;
             height: auto;
             margin: 20px auto;
-            border-radius: 10px; /* Rounded corners for images */
+            border-radius: 10px;
         }
         .task-title {
             color: #e0c709;
             font-weight: bold;
         }
         .time {
-            color: #333; 
+            color: #333;
         }
-        
     </style>
 </head>
 <body>
     <div class="container">
+        <h2>Welcome to Ryan's Daily News</h2>
         <div class="text-section">
-            <h2>Welcome to Ryan's Daily News</h2>
             <p>Good Morning {name}, </p>
-            <p>Stay updated with the latest news in tech, about my life, and interesting facts. Heres today's roundup:</p>
+            <p>Hope you enjoy and welcome to the {edition_number} edition of Ryan's Daily News! Stay updated with the latest news in tech, about my life, and interesting facts. Here's today's roundup:</p>
         </div>
         <div class="text-section">
             <p class="highlight-heading">My Schedule for the Day</p>
@@ -142,12 +144,12 @@
             <p class="highlight-heading">Cool Science Fact!</p>
             <ul class="highlight small-text" id="fact">
                 {science_facts}
-           </ul>
+            </ul>
         </div>
         <div class="text-section">
             <p class="highlight-heading">Ryan's Market Analysis (Crypto + Securities)</p>
             <ul class="highlight">
-                Crypto is booming... <h5>While this feature is still being made, I'll give you my two cents on the state of crypto at the moment. In the past week, Bitcoin(BTC) dropped over $600 millio in liquidations with the majority being long term positions. This caused panic and a day of large losses. Subsequently, Ethereum (eth) saw a dip eblow $3k. Luckily, the german government bought a considerable amount of BTC back from exchanges which helps to provide investor confidence and market stability.</h5><ul class="highlight">
+                Q2 reports... <h5>While this feature is still being made, I'll give you my two cents on current state of the market. S&P 500 Financials sector is bracing for Q2 earnings, with major banks likely to report a significant decline. Over 40% of the sector will report, with Insurance and Capital Markets industries showing growth, but the Banks industry could drop by 10%. Key metrics like interest rates, sluggish loan growth, and mixed noninterest revenues are in focus. Analysts predict fluctuating growth rates for the next few quarters. Could this signal a turning point for the financial sector?</h5><ul class="highlight">
                     Now is as good of a time as ever to invest!</ul>
             </ul>
             
