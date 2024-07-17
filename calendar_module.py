@@ -8,17 +8,28 @@ from zoneinfo import ZoneInfo  # Python 3.9 and later
 
 def fetch_events():
     creds = None
-    if os.path.exists('token.json'):
-        creds = Credentials.from_authorized_user_file('token.json', scopes=['https://www.googleapis.com/auth/calendar.readonly'])
+    token_path = 'token.json'
+    credentials_path = 'credentials.json'
+    scopes = ['https://www.googleapis.com/auth/calendar.readonly']
+    redirect_uri_port = 57874  # Define a fixed port for the redirect URI
+
+    if os.path.exists(token_path):
+        creds = Credentials.from_authorized_user_file(token_path, scopes=scopes)
+
     if not creds or not creds.valid:
         if creds and creds.expired and creds.refresh_token:
-            creds.refresh(Request())
-        else:
+            try:
+                creds.refresh(Request())
+            except Exception as e:
+                print(f"Error refreshing credentials: {e}")
+                creds = None  # Invalidate the creds if refresh fails
+        if not creds:  # If creds are still not valid, reauthenticate
             flow = InstalledAppFlow.from_client_secrets_file(
-                'credentials.json', scopes=['https://www.googleapis.com/auth/calendar.readonly'])
-            creds = flow.run_local_server(port=0)
-        with open('token.json', 'w') as token:
-            token.write(creds.to_json())
+                credentials_path, scopes=scopes)
+            # Specify the fixed port for redirect URI
+            creds = flow.run_local_server(port=redirect_uri_port)
+            with open(token_path, 'w') as token:
+                token.write(creds.to_json())
 
     service = build('calendar', 'v3', credentials=creds)
 
