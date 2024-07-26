@@ -113,6 +113,32 @@
         .time {
             color: #333;
         }
+        .social-media {
+            margin-top: 20px;
+        }
+        .social-media a {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            margin: 0 10px;
+        }
+        .social-media img {
+            width: 100%;
+            height: 100%;
+        }
+        .gauge-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-top: 20px;
+            align-items: center;
+        }
+
+        .gauge-grid img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
@@ -149,10 +175,18 @@
         <div class="text-section">
             <p class="highlight-heading">Ryan's Market Analysis (Crypto + Securities)</p>
             <ul class="highlight">
-                Q2 reports... <h5>While this feature is still being made, I'll give you my two cents on current state of the market. S&P 500 Financials sector is bracing for Q2 earnings, with major banks likely to report a significant decline. Over 40% of the sector will report, with Insurance and Capital Markets industries showing growth, but the Banks industry could drop by 10%. Key metrics like interest rates, sluggish loan growth, and mixed noninterest revenues are in focus. Analysts predict fluctuating growth rates for the next few quarters. Could this signal a turning point for the financial sector?</h5><ul class="highlight">
-                    Now is as good of a time as ever to invest!</ul>
+                <h5>Stock Sentiment Gauges:
+                <div class="gauge-grid">
+                    <img src="https://storage.googleapis.com/ryansdailynews-7df9d.appspot.com/gauges/stock_sentiment_gauge_0.png" alt="Stock Sentiment Gauge 1">
+                    <img src="https://storage.googleapis.com/ryansdailynews-7df9d.appspot.com/gauges/stock_sentiment_gauge_1.png" alt="Stock Sentiment Gauge 2">
+                    <img src="https://storage.googleapis.com/ryansdailynews-7df9d.appspot.com/gauges/stock_sentiment_gauge_2.png" alt="Stock Sentiment Gauge 3">
+                    <img src="https://storage.googleapis.com/ryansdailynews-7df9d.appspot.com/gauges/stock_sentiment_gauge_3.png" alt="Stock Sentiment Gauge 4">
+                    <img src="https://storage.googleapis.com/ryansdailynews-7df9d.appspot.com/gauges/stock_sentiment_gauge_4.png" alt="Stock Sentiment Gauge 5">
+                    <img src="https://storage.googleapis.com/ryansdailynews-7df9d.appspot.com/gauges/stock_sentiment_gauge_5.png" alt="Stock Sentiment Gauge 6">
+                </div>
+                </h5>
+                <p style="text-align: center;" class="highlight small-text">Now is as good of a time as ever to invest!</p>
             </ul>
-            
         </div>
         <div class="text-section">
             <p class="highlight-heading">To-Do List</p>
@@ -177,6 +211,13 @@
         <img src="https://rkaelle.com/assets/Signature.gif" alt="Ryan's Signature" class="signature">
         
         <div class="footer">
+            <div class="social-media">
+                <a href="https://www.linkedin.com/in/ryan-kaelle"><img src="https://www.rkaelle.com/assets/linkedin_icon.png" alt="LinkedIn"></a>
+                <a href="https://www.github.com/rkaelle"><img src="https://www.rkaelle.com/assets/github_icon.png" alt="Github"></a>
+                <a href="https://twitter.com/KaelleRyan"><img src="https://www.rkaelle.com/assets/x_icon.png" alt="X (formerly Twitter)"></a>
+                <a href="https://www.instagram.com/ryankaelle"><img src="https://www.rkaelle.com/assets/instagram_icon.png" alt="Instagram"></a>
+                <a href="https://strava.app.link/OXgQwBfWqLb"><img src="https://www.rkaelle.com/assets/strava_icon.png" alt="Strava"></a>
+            </div>
             <p>Thank you for subscribing! </p>
             <a href="https://www.rkaelle.com/#/manage" style="color: #ff6347; text-decoration: none; background-color: #f0f0f0; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">Unsubscribe</a>
             <p>© 2024 Ryan Kaelle. All rights reserved.</p>
