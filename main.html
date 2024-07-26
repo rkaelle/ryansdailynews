@@ -120,7 +120,8 @@
             display: inline-block;
             width: 30px;
             height: 30px;
-            margin: 0 10px;
+            margin: 5px;
+            padding-top: 5px;
         }
         .social-media img {
             width: 100%;
@@ -168,7 +169,7 @@
         </div>
         <div class="text-section">
             <p class="highlight-heading">Cool Science Fact!</p>
-            <ul class="highlight small-text" id="fact">
+            <ul class="" id="science_facts">
                 {science_facts}
             </ul>
         </div>
@@ -178,12 +179,32 @@
                 <div style="background-color: #ffffff; padding: 10px; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
                     <h5 class="no-background" style="background-color: transparent; box-shadow: none; padding: 0; margin: 0;">Stock Public Sentiments:</h5>
                     <div class="gauge-grid">
-                        <img src="https://storage.googleapis.com/ryansdailynews-7df9d.appspot.com/gauges/stock_sentiment_gauge_0.png" alt="Stock Sentiment Gauge 1">
-                        <img src="https://storage.googleapis.com/ryansdailynews-7df9d.appspot.com/gauges/stock_sentiment_gauge_1.png" alt="Stock Sentiment Gauge 2">
-                        <img src="https://storage.googleapis.com/ryansdailynews-7df9d.appspot.com/gauges/stock_sentiment_gauge_2.png" alt="Stock Sentiment Gauge 3">
-                        <img src="https://storage.googleapis.com/ryansdailynews-7df9d.appspot.com/gauges/stock_sentiment_gauge_3.png" alt="Stock Sentiment Gauge 4">
-                        <img src="https://storage.googleapis.com/ryansdailynews-7df9d.appspot.com/gauges/stock_sentiment_gauge_4.png" alt="Stock Sentiment Gauge 5">
-                        <img src="https://storage.googleapis.com/ryansdailynews-7df9d.appspot.com/gauges/stock_sentiment_gauge_5.png" alt="Stock Sentiment Gauge 6">
+                        <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td style="padding: 5px;">
+                                    <img src="https://storage.googleapis.com/ryansdailynews-7df9d.appspot.com/gauges/stock_sentiment_gauge_0.png" alt="Stock Sentiment Gauge 1" style="width: 100%;">
+                                </td>
+                                <td style="padding: 5px;">
+                                    <img src="https://storage.googleapis.com/ryansdailynews-7df9d.appspot.com/gauges/stock_sentiment_gauge_1.png" alt="Stock Sentiment Gauge 2" style="width: 100%;">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 5px;">
+                                    <img src="https://storage.googleapis.com/ryansdailynews-7df9d.appspot.com/gauges/stock_sentiment_gauge_2.png" alt="Stock Sentiment Gauge 3" style="width: 100%;">
+                                </td>
+                                <td style="padding: 5px;">
+                                    <img src="https://storage.googleapis.com/ryansdailynews-7df9d.appspot.com/gauges/stock_sentiment_gauge_3.png" alt="Stock Sentiment Gauge 4" style="width: 100%;">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 5px;">
+                                    <img src="https://storage.googleapis.com/ryansdailynews-7df9d.appspot.com/gauges/stock_sentiment_gauge_4.png" alt="Stock Sentiment Gauge 5" style="width: 100%;">
+                                </td>
+                                <td style="padding: 5px;">
+                                    <img src="https://storage.googleapis.com/ryansdailynews-7df9d.appspot.com/gauges/stock_sentiment_gauge_5.png" alt="Stock Sentiment Gauge 6" style="width: 100%;">
+                                </td>
+                            </tr>
+                        </table>
                     </div>
                     <p>Interested in how it works? See my code and breakdown <a href="https://github.com/rkaelle/sentiment-analysis-bot" class="email-link">here</a>!</p>
                 </div>
