@@ -1,12 +1,13 @@
+# utils.py
 from firebase_admin import firestore
 
 def get_current_edition(db):
     edition_ref = db.collection('settings').document('newsletter')
     edition_doc = edition_ref.get()
     if edition_doc.exists:
-        return edition_doc.to_dict().get('edition_number', 1)  # Default to 1 if not set
+        return edition_doc.to_dict().get('edition_number', 1)
     else:
-        edition_ref.set({'edition_number': 1})  # Initialize if not present
+        edition_ref.set({'edition_number': 1})
         return 1
 
 def update_edition_number(db, current_edition):

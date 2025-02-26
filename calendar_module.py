@@ -4,36 +4,42 @@ from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
 import datetime
 import os
-from zoneinfo import ZoneInfo  # Python 3.9 and later
+from zoneinfo import ZoneInfo  # Python 3.9+
+
 
 def fetch_events():
     creds = None
     token_path = 'token.json'
     credentials_path = 'credentials.json'
     scopes = ['https://www.googleapis.com/auth/calendar.readonly']
-    redirect_uri_port = 57874  # Define a fixed port for the redirect URI
+    redirect_uri_port = 57874  # or pick any unused port
 
+    # 1. Load existing user credentials from token.json
     if os.path.exists(token_path):
         creds = Credentials.from_authorized_user_file(token_path, scopes=scopes)
 
+    # 2. Refresh them if expired, or re-run the Installed App flow if not valid
     if not creds or not creds.valid:
         if creds and creds.expired and creds.refresh_token:
             try:
                 creds.refresh(Request())
             except Exception as e:
                 print(f"Error refreshing credentials: {e}")
-                creds = None  # Invalidate the creds if refresh fails
-        if not creds:  # If creds are still not valid, reauthenticate
-            flow = InstalledAppFlow.from_client_secrets_file(
-                credentials_path, scopes=scopes)
-            # Specify the fixed port for redirect URI
+                creds = None  # If refresh fails, we'll reauthenticate below
+
+        if not creds:
+            # 3. Run local server flow to let the user log in
+            flow = InstalledAppFlow.from_client_secrets_file(credentials_path, scopes=scopes)
             creds = flow.run_local_server(port=redirect_uri_port)
+
+            # 4. Save the credentials for future runs
             with open(token_path, 'w') as token:
                 token.write(creds.to_json())
 
+    # 5. Build the Calendar API client
     service = build('calendar', 'v3', credentials=creds)
 
-    # Adjust for PST Timezone
+    # 6. Set times in PST
     tz = ZoneInfo("America/Los_Angeles")
     now = datetime.datetime.now(tz).replace(hour=0, minute=0, second=0, microsecond=0)
     end_of_day = now + datetime.timedelta(days=1)
@@ -50,12 +56,23 @@ def fetch_events():
 
     events = events_result.get('items', [])
 
-    # Format event list to show only time in PST with HTML formatting
+    # 7. Format event list
     formatted_events = []
     for event in events:
-        start_time = datetime.datetime.fromisoformat(event['start'].get('dateTime')).astimezone(tz).strftime('%I:%M%p').lower().lstrip('0')
-        end_time = datetime.datetime.fromisoformat(event['end'].get('dateTime')).astimezone(tz).strftime('%I:%M%p').lower().lstrip('0')
-        event_html = f"<span class='highlight'>{event['summary']}</span>: <span class='time'>{start_time} – {end_time}</span>"
+        start_time = (datetime.datetime
+                      .fromisoformat(event['start'].get('dateTime'))
+                      .astimezone(tz)
+                      .strftime('%I:%M%p')
+                      .lower()
+                      .lstrip('0'))
+        end_time = (datetime.datetime
+                    .fromisoformat(event['end'].get('dateTime'))
+                    .astimezone(tz)
+                    .strftime('%I:%M%p')
+                    .lower()
+                    .lstrip('0'))
+        event_html = (f"<span class='highlight'>{event['summary']}</span>: "
+                      f"<span class='time'>{start_time} – {end_time}</span>")
         formatted_events.append(event_html)
 
     return formatted_events

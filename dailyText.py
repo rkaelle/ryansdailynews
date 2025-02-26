@@ -8,7 +8,6 @@ def send_daily_sms():
     account_sid = os.environ['TWILIO_SID']
     auth_token = os.environ['TWILIO_TOKEN']
     client = Client(account_sid, auth_token)
-    my_number = os.getenv('MY_NUMBER')
 
     try:
         message = client.messages.create(
@@ -17,7 +16,7 @@ def send_daily_sms():
                     "What was your favorite food you ate yesterday?\n"
                     "~Respond By 6AM~"
                     ),
-            from_='+18449035435', 
+            from_='+18553942449', 
             to='+19258859358'
         )
         print(f"Message sent: {message.sid}")

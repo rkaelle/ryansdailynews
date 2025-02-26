@@ -1,3 +1,4 @@
+import json
 import openai
 from openai import OpenAI
 import os
@@ -6,49 +7,46 @@ def process_message_with_openai(message):
     # Ensure API key is properly loaded
     client = OpenAI(api_key=os.getenv('OPEN_API_KEY'))
 
-    # Define the conversation context and user message
+    # Instruct the model to output a JSON object with exactly these keys.
     messages = [
-        {"role": "system", "content": "Talk in first person as the person who sent the message. You should organize and extract the information. Make the informal text into a nice looking chunk of words. Do not mention anything like 'From the message,' or ' it appears that the sender said'"},
-        {"role": "user", "content": f"Please analyze the following message and provide structured responses for each of these queries:\n\nMessage: '{message.body}'\n\n1. Identify any skill being learned from the message and make sure to include the word learning.\n2. Provide a reflection on yesterday based on the message and make sure to include \"reflecting on yesterday\" \n3. Note any favorite food mentioned in the message and make sure to include \"My favorite food from yesterday was\" Additioanlly, say a random science fun fact and make it the 4th bullet point (but dont include any intro such as: \"Here's a fun science fact:\"). 4."}
+        {
+            "role": "system",
+            "content": (
+                "You are a highly intelligent and creative assistant. Analyze the provided message and extract key insights. "
+                "Output a JSON object with exactly four keys: 'skills', 'reflections', 'food', and 'science'. "
+                "For 'skills', extract any mention of a skill or something being learned (ensure the word 'learning' appears). "
+                "For 'reflections', summarize any thoughtful reflection on yesterday's events. "
+                "For 'food', extract any mention of a favorite food. "
+                "For 'science', ignore the message and generate a random, interesting, and fun science fact. "
+                "Do not include any extra text—only output the JSON object."
+            )
+        },
+        {
+            "role": "user",
+            "content": (
+                f"Analyze the following message and provide the information in JSON format as specified. "
+                f"Message: '{message}'"
+            )
+        }
     ]
 
-    # Call to OpenAI's Chat API
     try:
         response = client.chat.completions.create(
-            model="gpt-4",  # Confirm the correct model identifier
+            model="gpt-4",
             messages=messages,
             max_tokens=350
         )
 
-        # Assuming the response is formatted as expected
-        text = response.choices[0].message.content
-        lines = text.split('\n\n')
-        processed_content = {}
-    
-        if response.choices and response.choices[0].message and response.choices[0].message.content:
-            text = response.choices[0].message.content
-            lines = text.split('\n\n')
-            processed_content = {}
-        
+        raw_output = response.choices[0].message.content.strip()
+        print(f"OpenAI raw response: {raw_output}")
 
-            for line in lines:
-                # Normalize space and remove any leading or trailing whitespace
-                line = line.strip()
-                # Determine the content category by presence of specific keywords
-                if line.startswith('1.'):
-                    # Extracts everything after the number and period which typically follows the format number.
-                    processed_content['skills'] = line[3:].strip()
-                elif line.startswith('2.'):
-                    processed_content['reflections'] = line[3:].strip()
-                elif line.startswith('3.'):
-                    processed_content['food'] = line[3:].strip()
-                elif line.startswith('4.'):
-                    processed_content['science'] = line[3:].strip()
-            return processed_content
-        else:
-            print("No valid response in choices")
-            return {}
+        # Remove any markdown code block markers if present
+        if raw_output.startswith("```") and raw_output.endswith("```"):
+            raw_output = raw_output.strip("```").strip()
 
+        # Attempt to parse the output as JSON
+        processed_content = json.loads(raw_output)
+        return processed_content
 
     except Exception as e:
         print(f"Error processing message with OpenAI: {e}")

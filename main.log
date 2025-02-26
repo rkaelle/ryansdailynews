@@ -1,0 +1,201 @@
+2025-02-26 17:33:07,956 [INFO] Connected to the SMTP server successfully
+2025-02-26 17:33:14,515 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-26 17:33:15,478 [INFO] Fetching events and content
+2025-02-26 17:33:15,588 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-02-26 17:33:16,033 [INFO] Starting to send emails to users
+2025-02-26 17:33:16,592 [INFO] Test email sent successfully to rkaelle2@gmail.com!
+2025-02-26 17:33:18,142 [INFO] Test email sent successfully to rkaelle@umich.edu!
+2025-02-26 17:33:19,677 [INFO] Test email sent successfully to einisman@umich.edu!
+2025-02-26 17:33:22,445 [INFO] Cleared the current edition.
+2025-02-26 17:33:22,476 [INFO] SMTP server connection closed
+2025-02-26 17:33:53,500 [INFO] Connected to the SMTP server successfully
+2025-02-26 17:34:01,450 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-26 17:34:01,765 [INFO] Fetching events and content
+2025-02-26 17:34:01,872 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-02-26 17:34:03,073 [INFO] Starting to send emails to users
+2025-02-26 17:34:03,495 [INFO] Test email sent successfully to jgeinisman@umich.edu!
+2025-02-26 17:34:05,252 [INFO] Cleared the current edition.
+2025-02-26 17:34:05,280 [INFO] SMTP server connection closed
+2025-02-26 17:34:56,433 [INFO] Connected to the SMTP server successfully
+2025-02-26 17:34:57,967 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-26 17:34:58,293 [INFO] Fetching events and content
+2025-02-26 17:34:58,394 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-02-26 17:34:58,665 [INFO] Starting to send emails to users
+2025-02-26 17:34:59,089 [INFO] Test email sent successfully to jgeinisman@gmail.com!
+2025-02-26 17:35:00,549 [INFO] Cleared the current edition.
+2025-02-26 17:35:00,577 [INFO] SMTP server connection closed
+2025-02-26 17:35:58,698 [INFO] Connected to the SMTP server successfully
+2025-02-26 17:36:00,721 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-26 17:36:01,970 [INFO] Fetching events and content
+2025-02-26 17:36:02,075 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-02-26 17:36:02,376 [INFO] Starting to send emails to users
+2025-02-26 17:36:02,872 [INFO] Test email sent successfully to jgeinisman@gmail.com!
+2025-02-26 17:36:04,120 [INFO] Cleared the current edition.
+2025-02-26 17:36:04,149 [INFO] SMTP server connection closed
+2025-02-26 17:36:14,547 [INFO] Connected to the SMTP server successfully
+2025-02-26 17:36:19,268 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-26 17:36:20,085 [INFO] Fetching events and content
+2025-02-26 17:36:20,607 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-02-26 17:36:20,960 [INFO] Starting to send emails to users
+2025-02-26 17:36:21,528 [INFO] Test email sent successfully to jgeinisman@gmail.com!
+2025-02-26 17:36:22,774 [INFO] Cleared the current edition.
+2025-02-26 17:36:22,804 [INFO] SMTP server connection closed
+2025-02-26 17:42:20,016 [INFO] Connected to the SMTP server successfully
+2025-02-26 17:42:27,529 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-26 17:42:28,780 [INFO] Fetching events and content
+2025-02-26 17:42:28,999 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-02-26 17:42:29,442 [INFO] Starting to send emails to users
+2025-02-26 17:42:43,795 [INFO] Connected to the SMTP server successfully
+2025-02-26 17:42:50,799 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-26 17:42:51,158 [INFO] Fetching events and content
+2025-02-26 17:42:51,261 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-02-26 17:42:51,580 [INFO] Starting to send emails to users
+2025-02-26 17:42:51,977 [INFO] Test email sent successfully to rkaelle2@gmail.com!
+2025-02-26 17:42:53,528 [INFO] Test email sent successfully to rkaelle@umich.edu!
+2025-02-26 17:42:55,177 [INFO] Cleared the current edition.
+2025-02-26 17:42:55,205 [INFO] SMTP server connection closed
+2025-02-26 17:44:27,888 [INFO] Connected to the SMTP server successfully
+2025-02-26 17:44:31,928 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-26 17:44:33,147 [INFO] Fetching events and content
+2025-02-26 17:44:33,398 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-02-26 17:44:33,709 [INFO] Starting to send emails to users
+2025-02-26 17:44:34,242 [INFO] Test email sent successfully to rkaelle2@gmail.com!
+2025-02-26 17:44:35,819 [INFO] Test email sent successfully to rkaelle@umich.edu!
+2025-02-26 17:44:38,010 [INFO] Cleared the current edition.
+2025-02-26 17:44:38,057 [INFO] SMTP server connection closed
+2025-02-26 17:47:26,611 [INFO] Connected to the SMTP server successfully
+2025-02-26 17:47:31,285 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-26 17:47:32,136 [INFO] Fetching events and content
+2025-02-26 17:47:32,386 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-02-26 17:47:33,002 [INFO] Starting to send emails to users
+2025-02-26 17:47:33,495 [INFO] Test email sent successfully to rkaelle2@gmail.com!
+2025-02-26 17:47:34,947 [INFO] Test email sent successfully to rkaelle@umich.edu!
+2025-02-26 17:47:37,077 [INFO] Cleared the current edition.
+2025-02-26 17:47:37,128 [INFO] SMTP server connection closed
+2025-02-26 17:48:34,528 [INFO] Connected to the SMTP server successfully
+2025-02-26 17:48:42,237 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-26 17:48:43,450 [INFO] Fetching events and content
+2025-02-26 17:48:43,685 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-02-26 17:48:44,422 [INFO] Starting to send emails to users
+2025-02-26 17:48:44,990 [INFO] Test email sent successfully to rkaelle2@gmail.com!
+2025-02-26 17:48:46,530 [INFO] Test email sent successfully to rkaelle@umich.edu!
+2025-02-26 17:48:47,885 [INFO] Cleared the current edition.
+2025-02-26 17:48:47,940 [INFO] SMTP server connection closed
+2025-02-26 17:51:49,823 [INFO] Connected to the SMTP server successfully
+2025-02-26 17:51:54,531 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-26 17:51:55,883 [INFO] Fetching events and content
+2025-02-26 17:51:55,985 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-02-26 17:51:56,308 [INFO] Starting to send emails to users
+2025-02-26 17:51:56,813 [INFO] Test email sent successfully to rkaelle2@gmail.com!
+2025-02-26 17:51:58,322 [INFO] Test email sent successfully to rkaelle@umich.edu!
+2025-02-26 17:51:59,601 [INFO] Cleared the current edition.
+2025-02-26 17:51:59,627 [INFO] SMTP server connection closed
+2025-02-26 17:54:50,962 [INFO] Connected to the SMTP server successfully
+2025-02-26 17:54:56,396 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-26 17:54:57,025 [INFO] Fetching events and content
+2025-02-26 17:54:57,134 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-02-26 17:54:57,472 [INFO] Starting to send emails to users
+2025-02-26 17:54:58,033 [INFO] Test email sent successfully to rkaelle2@gmail.com!
+2025-02-26 17:54:59,627 [INFO] Test email sent successfully to rkaelle@umich.edu!
+2025-02-26 17:55:01,230 [INFO] Test email sent successfully to coldclangamingcld@gmail.com!
+2025-02-26 17:55:03,210 [INFO] Cleared the current edition.
+2025-02-26 17:55:03,257 [INFO] SMTP server connection closed
+2025-02-26 17:55:45,192 [INFO] Connected to the SMTP server successfully
+2025-02-26 17:55:50,551 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-26 17:55:50,868 [INFO] Fetching events and content
+2025-02-26 17:55:50,974 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-02-26 17:55:51,399 [INFO] Starting to send emails to users
+2025-02-26 17:55:51,847 [INFO] Test email sent successfully to coldclangamingcld@gmail.com!
+2025-02-26 17:55:53,331 [INFO] Test email sent successfully to isicklgaming@gmail.com!
+2025-02-26 17:55:55,118 [INFO] Cleared the current edition.
+2025-02-26 17:55:55,146 [INFO] SMTP server connection closed
+2025-02-26 17:58:18,584 [INFO] Connected to the SMTP server successfully
+2025-02-26 17:58:23,550 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-26 17:58:24,117 [INFO] Fetching events and content
+2025-02-26 17:58:24,453 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-02-26 17:58:26,050 [INFO] Starting to send emails to users
+2025-02-26 17:58:26,572 [INFO] Test email sent successfully to coldclangamingcld@gmail.com!
+2025-02-26 17:58:28,057 [INFO] Test email sent successfully to isicklgaming@gmail.com!
+2025-02-26 17:58:29,427 [INFO] Cleared the current edition.
+2025-02-26 17:58:29,470 [INFO] SMTP server connection closed
+2025-02-26 17:59:20,244 [INFO] Connected to the SMTP server successfully
+2025-02-26 17:59:26,344 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-26 17:59:26,885 [INFO] Fetching events and content
+2025-02-26 17:59:27,025 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-02-26 17:59:27,411 [INFO] Starting to send emails to users
+2025-02-26 17:59:28,029 [INFO] Test email sent successfully to rkaelle2@gmail.com!
+2025-02-26 17:59:29,601 [INFO] Test email sent successfully to rkaelle@umich.edu!
+2025-02-26 17:59:31,278 [INFO] Cleared the current edition.
+2025-02-26 17:59:31,311 [INFO] SMTP server connection closed
+2025-02-26 18:01:14,135 [INFO] Connected to the SMTP server successfully
+2025-02-26 18:01:21,594 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-26 18:01:22,124 [INFO] Fetching events and content
+2025-02-26 18:01:22,239 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-02-26 18:01:22,661 [INFO] Starting to send emails to users
+2025-02-26 18:01:23,311 [INFO] Test email sent successfully to rkaelle2@gmail.com!
+2025-02-26 18:01:24,919 [INFO] Test email sent successfully to rkaelle@umich.edu!
+2025-02-26 18:01:26,158 [INFO] Cleared the current edition.
+2025-02-26 18:01:26,206 [INFO] SMTP server connection closed
+2025-02-26 18:02:55,299 [INFO] Connected to the SMTP server successfully
+2025-02-26 18:03:00,817 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-26 18:03:01,256 [INFO] Fetching events and content
+2025-02-26 18:03:01,389 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-02-26 18:03:01,724 [INFO] Starting to send emails to users
+2025-02-26 18:03:02,260 [INFO] Test email sent successfully to rkaelle2@gmail.com!
+2025-02-26 18:03:03,875 [INFO] Test email sent successfully to rkaelle@umich.edu!
+2025-02-26 18:03:05,091 [INFO] Cleared the current edition.
+2025-02-26 18:03:05,136 [INFO] SMTP server connection closed
+2025-02-26 18:03:21,365 [INFO] Connected to the SMTP server successfully
+2025-02-26 18:03:27,597 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-26 18:03:28,520 [INFO] Fetching events and content
+2025-02-26 18:03:28,625 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-02-26 18:03:28,968 [INFO] Starting to send emails to users
+2025-02-26 18:03:29,490 [INFO] Test email sent successfully to rkaelle2@gmail.com!
+2025-02-26 18:03:30,940 [INFO] Test email sent successfully to rkaelle@umich.edu!
+2025-02-26 18:03:37,597 [INFO] Cleared the current edition.
+2025-02-26 18:03:37,632 [INFO] SMTP server connection closed
+2025-02-26 18:05:52,022 [INFO] Connected to the SMTP server successfully
+2025-02-26 18:05:58,613 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-26 18:05:59,000 [INFO] Fetching events and content
+2025-02-26 18:05:59,117 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-02-26 18:05:59,810 [INFO] Starting to send emails to users
+2025-02-26 18:06:00,527 [INFO] Test email sent successfully to rkaelle2@gmail.com!
+2025-02-26 18:06:02,134 [INFO] Test email sent successfully to rkaelle@umich.edu!
+2025-02-26 18:06:03,391 [INFO] Cleared the current edition.
+2025-02-26 18:06:03,443 [INFO] SMTP server connection closed
+2025-02-26 18:10:42,012 [INFO] Connected to the SMTP server successfully
+2025-02-26 18:10:46,625 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-26 18:10:47,018 [INFO] Fetching events and content
+2025-02-26 18:10:47,265 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-02-26 18:10:47,757 [INFO] Starting to send emails to users
+2025-02-26 18:10:48,295 [INFO] Test email sent successfully to rkaelle2@gmail.com!
+2025-02-26 18:10:49,906 [INFO] Test email sent successfully to rkaelle@umich.edu!
+2025-02-26 18:10:51,149 [INFO] Cleared the current edition.
+2025-02-26 18:10:51,182 [INFO] SMTP server connection closed
+2025-02-26 18:11:11,305 [INFO] Connected to the SMTP server successfully
+2025-02-26 18:11:17,880 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-26 18:11:18,488 [INFO] Fetching events and content
+2025-02-26 18:11:18,599 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-02-26 18:11:18,919 [INFO] Starting to send emails to users
+2025-02-26 18:11:19,448 [INFO] Test email sent successfully to rkaelle2@gmail.com!
+2025-02-26 18:11:20,946 [INFO] Test email sent successfully to rkaelle@umich.edu!
+2025-02-26 18:11:22,305 [INFO] Cleared the current edition.
+2025-02-26 18:11:22,352 [INFO] SMTP server connection closed
+2025-02-26 18:14:10,149 [INFO] Connected to the SMTP server successfully
+2025-02-26 18:14:16,567 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-26 18:14:17,910 [INFO] Fetching events and content
+2025-02-26 18:14:17,999 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-02-26 18:14:18,358 [INFO] Starting to send emails to users
+2025-02-26 18:14:18,865 [INFO] Test email sent successfully to rkaelle2@gmail.com!
+2025-02-26 18:14:20,357 [INFO] Test email sent successfully to rkaelle@umich.edu!
+2025-02-26 18:14:22,126 [INFO] Cleared the current edition.
+2025-02-26 18:14:22,153 [INFO] SMTP server connection closed
+2025-02-26 18:16:53,092 [INFO] Connected to the SMTP server successfully
+2025-02-26 18:16:56,191 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-26 18:16:56,593 [INFO] Fetching events and content
+2025-02-26 18:16:56,703 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-02-26 18:16:57,034 [INFO] Starting to send emails to users
+2025-02-26 18:16:57,591 [INFO] Test email sent successfully to rkaelle2@gmail.com!
+2025-02-26 18:16:59,153 [INFO] Test email sent successfully to rkaelle@umich.edu!
+2025-02-26 18:17:01,274 [INFO] Cleared the current edition.
+2025-02-26 18:17:01,319 [INFO] SMTP server connection closed
