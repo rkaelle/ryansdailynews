@@ -183,51 +183,13 @@ def send_newsletter(db, server, processed_content):
         return
 
     logging.info("Starting to send emails to users")
-    # for index, user in enumerate(users_list):
-    #     ensure_smtp_connection(server)  # Ensure connection is still alive
-    #     user_data = user.to_dict()
-    #     user_name = user_data.get('firstName', 'Valued Member')
-    #     user_email = user_data.get('email', sender_email)
-
-    #     logging.info(f"Preparing email for {user_name} ({user_email})")
-
-    #     # HTML content
-    #     html_content = base_html_content.replace('{name}', user_name)
-    #     html_content = html_content.replace('{edition_number}', ordinal(current_edition_number))
-    #     html_content = html_content.replace('{events_list}', f"<ul>{''.join(f'<li>{event}</li>' for event in events)}</ul>")
-    #     html_content = html_content.replace('{skills_list}', ''.join(f'{skill}<br>' for skill in skills))
-    #     html_content = html_content.replace('{reflections_list}', ''.join(f'{reflection}<br>' for reflection in reflections))
-    #     html_content = html_content.replace('{favorite_food}', ''.join(f'{f}<br>' for f in food))
-    #     html_content = html_content.replace('{science_facts}', ''.join(f'{fact}<br>' for fact in science_facts))
-
-    #     # Setup the MIME
-    #     message = MIMEMultipart()
-    #     message['From'] = sender_email
-    #     message['To'] = user_email
-    #     message['Subject'] = f"Ryan's Daily News {datetime.datetime.now().strftime('%x')}"
-    #     message.attach(MIMEText(html_content, 'html'))
-
-    #     # Send the email
-    #     try:
-    #         server.sendmail(sender_email, user_email, message.as_string())
-    #         logging.info(f"Email sent successfully to {user_email}!")
-    #     except Exception as e:
-    #         logging.error(f"Failed to send email to {user_email}: {e}")
-
-    #     # Delay to avoid hitting the rate limit
-    #     if (index + 1) % 7 == 0:
-    #         logging.info("Sleeping for 10 minutes to avoid rate limit")
-    #         time.sleep(600)  # 10 minutes
-    # Define your test email list
-    #ryan_list = ['coldclangamingcld@gmail.com', 'isicklgaming@gmail.com']
-    ryan_list = ['rkaelle2@gmail.com','rkaelle@umich.edu']
-
-    logging.debug("Starting to send test emails to ryan_list")
-    for index, user_email in enumerate(ryan_list):
+    for index, user in enumerate(users_list):
         ensure_smtp_connection(server)  # Ensure connection is still alive
-        user_name = 'Ryan'  # You can set a static name for testing
+        user_data = user.to_dict()
+        user_name = user_data.get('firstName', 'Valued Member')
+        user_email = user_data.get('email', sender_email)
 
-        logging.debug(f"Preparing email for {user_name} ({user_email})")
+        logging.info(f"Preparing email for {user_name} ({user_email})")
 
         # HTML content
         html_content = base_html_content.replace('{name}', user_name)
@@ -248,12 +210,50 @@ def send_newsletter(db, server, processed_content):
         # Send the email
         try:
             server.sendmail(sender_email, user_email, message.as_string())
-            logging.info(f"Test email sent successfully to {user_email}!")
+            logging.info(f"Email sent successfully to {user_email}!")
         except Exception as e:
             logging.error(f"Failed to send email to {user_email}: {e}")
 
-        # Optional: Add a short delay between emails to mimic real sending behavior
-        time.sleep(1)  # Sleep for 1 second
+        # Delay to avoid hitting the rate limit
+        if (index + 1) % 7 == 0:
+            logging.info("Sleeping for 10 minutes to avoid rate limit")
+            time.sleep(600)  # 10 minutes
+    # Define your test email list
+    #ryan_list = ['coldclangamingcld@gmail.com', 'isicklgaming@gmail.com']
+    #ryan_list = ['rkaelle2@gmail.com','rkaelle@umich.edu']
+
+    # logging.debug("Starting to send test emails to ryan_list")
+    # for index, user_email in enumerate(ryan_list):
+    #     ensure_smtp_connection(server)  # Ensure connection is still alive
+    #     user_name = 'Ryan'  # You can set a static name for testing
+
+    #     logging.debug(f"Preparing email for {user_name} ({user_email})")
+
+    #     # HTML content
+    #     html_content = base_html_content.replace('{name}', user_name)
+    #     html_content = html_content.replace('{edition_number}', ordinal(current_edition_number))
+    #     html_content = html_content.replace('{events_list}', f"<ul>{''.join(f'<li>{event}</li>' for event in events)}</ul>")
+    #     html_content = html_content.replace('{skills_list}', ''.join(f'{skill}<br>' for skill in skills))
+    #     html_content = html_content.replace('{reflections_list}', ''.join(f'{reflection}<br>' for reflection in reflections))
+    #     html_content = html_content.replace('{favorite_food}', ''.join(f'{f}<br>' for f in food))
+    #     html_content = html_content.replace('{science_facts}', ''.join(f'{fact}<br>' for fact in science_facts))
+
+    #     # Setup the MIME
+    #     message = MIMEMultipart()
+    #     message['From'] = sender_email
+    #     message['To'] = user_email
+    #     message['Subject'] = f"Ryan's Daily News {datetime.datetime.now().strftime('%x')}"
+    #     message.attach(MIMEText(html_content, 'html'))
+
+    #     # Send the email
+    #     try:
+    #         server.sendmail(sender_email, user_email, message.as_string())
+    #         logging.info(f"Test email sent successfully to {user_email}!")
+    #     except Exception as e:
+    #         logging.error(f"Failed to send email to {user_email}: {e}")
+
+    #     # Optional: Add a short delay between emails to mimic real sending behavior
+    #     time.sleep(1)  # Sleep for 1 second
 
     # Archive the edition and clear current_edition
     send_email_archive_and_clear(db, current_edition_number)
